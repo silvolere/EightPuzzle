@@ -1,0 +1,18 @@
+# Jurgis Vass jtv34
+
+# testing effective branching factor function on all search algorithms
+setState 1 2 5 6 3 4 0 7 8
+solve DFS maxnodes=150000 depthlimit=7
+EBF 147 7
+
+setState 1 2 5 6 3 4 0 7 8
+solve BFS maxnodes=150000
+EBF 123 7
+
+setState 1 2 5 6 3 4 0 7 8
+solve A* h1 maxnodes=150000
+EBF 13 7
+
+setState 1 2 5 6 3 4 0 7 8
+solve A* h2
+EBF 13 7
