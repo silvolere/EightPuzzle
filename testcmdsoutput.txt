@@ -1,0 +1,104 @@
+# Jurgis Vass jtv34
+
+# puzzle starts in solved state
+printState
+ 12
+345
+678
+
+# move and setState test, including checking invalid moves
+setState 1 3 2 5 4 7 6 8 0
+printState
+132
+547
+68 
+move up
+printState
+132
+54 
+687
+move right
+Error: invalid command: right
+printState
+132
+54 
+687
+move left
+printState
+132
+5 4
+687
+move down
+printState
+132
+584
+6 7
+move down
+Error: invalid move
+printState
+132
+584
+6 7
+move right
+printState
+132
+584
+67 
+
+# return to original state
+move left
+move up
+move right
+move down
+printState
+132
+547
+68 
+
+# randomization test
+printState
+132
+547
+68 
+setSeed 0
+scrambleState 2000
+printState
+726
+4 5
+831
+setSeed 0
+scrambleState 2000
+printState
+726
+4 5
+831
+setSeed 1
+scrambleState 2000
+printState
+752
+6 1
+834
+
+# invalid commands test
+setState 012345678
+Error: invalid puzzle state
+setState 1 1 2 3 4 5 6 7 8
+Error: invalid puzzle state
+setState 0 1 2 3 4 5 6 7
+Error: invalid puzzle state
+setState 0 1 2 3 4 5 6 7 8 9
+Error: invalid puzzle state
+setState 0 1 2 3 4 5 6 7 a
+Error: invalid puzzle state
+setState fdjaklfjdkslajf
+Error: invalid puzzle state
+move up ajsdkfl
+Error: invalid move
+move djkalsf
+Error: invalid move
+scrambleState fdsaf
+Error: invalid command: fdsaf
+ewqriofdsa
+Error: invalid command: ewqriofdsa
+// both types of comments work
+
