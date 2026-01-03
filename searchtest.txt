@@ -1,0 +1,158 @@
+# Jurgis Vass jtv34
+
+# dfs test
+setSeed 5
+scrambleState 2000
+printState
+# this reaches maxnodes limit
+solve DFS
+# increase maxnodes (this still won't find it, too small depth limit)
+solve DFS maxnodes=100000
+# increase depthlimit
+solve DFS maxnodes=100000 depthlimit=100
+printState
+
+# bfs test 
+setSeed 5
+scrambleState 2000
+printState
+# this reaches maxnodes limit
+solve BFS
+# increase maxnodes
+solve BFS maxnodes=100000 (still won't find it)
+# increase maxnodes again
+solve BFS maxnodes=150000
+printState
+
+# both solutions find goal
+setSeed 5
+scrambleState 2000
+printState
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move down
+move left
+move left
+move up
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move down
+move left
+move up
+move right
+move right
+move down
+move left
+move left
+move up
+move right
+move down
+move right
+move up
+move left
+move left
+move down
+move right
+move up
+move right
+move down
+move left
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move down
+move right
+move up
+move left
+move down
+move right
+move right
+move up
+move left
+move left
+move up
+printState
+setSeed 5
+scrambleState 2000
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move up
+move right
+move down
+move down
+move left
+move left
+move up
+move up
+printState
