@@ -1,0 +1,75 @@
+# Jurgis Vass jtv34
+
+# testing heuristic function
+setState 0 2 3 4 5 6 7 8 1
+heuristic h1
+heuristic h2
+setState 0 1 2 3 4 5 6 7 8
+heuristic h1
+heuristic h2
+
+# testing A* with h1 heuristic
+setSeed 0
+scrambleState 2000
+printState
+solve A* h1 maxnodes=200000
+# the outputed moves are valid
+setSeed 0
+scrambleState 2000
+printState
+move down
+move right
+move up
+move up
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move left
+move up
+printState
+
+# testing A* with h2
+setSeed 0
+scrambleState 2000
+printState
+solve A* h2 maxnodes=200000
+# this is valid too
+setSeed 0
+scrambleState 2000
+printState
+move down
+move right
+move up
+move up
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move left
+move up
+printState

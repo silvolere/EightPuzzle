@@ -1,0 +1,147 @@
+# Jurgis Vass jtv34
+
+# testing heuristic function
+setState 0 2 3 4 5 6 7 8 1
+heuristic h1
+8
+heuristic h2
+14
+setState 0 1 2 3 4 5 6 7 8
+heuristic h1
+0
+heuristic h2
+0
+
+# testing A* with h1 heuristic
+setSeed 0
+scrambleState 2000
+printState
+726
+4 5
+831
+solve A* h1 maxnodes=200000
+Nodes created during search: 6660
+Solution length: 22
+Move sequence:
+move down
+move right
+move up
+move up
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move left
+move up
+# the outputed moves are valid
+setSeed 0
+scrambleState 2000
+printState
+726
+4 5
+831
+move down
+move right
+move up
+move up
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move left
+move up
+printState
+ 12
+345
+678
+
+# testing A* with h2
+setSeed 0
+scrambleState 2000
+printState
+726
+4 5
+831
+solve A* h2 maxnodes=200000
+Nodes created during search: 329
+Solution length: 22
+Move sequence:
+move down
+move right
+move up
+move up
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move left
+move up
+# this is valid too
+setSeed 0
+scrambleState 2000
+printState
+726
+4 5
+831
+move down
+move right
+move up
+move up
+move left
+move down
+move down
+move left
+move up
+move up
+move right
+move down
+move right
+move down
+move left
+move up
+move left
+move down
+move right
+move up
+move left
+move up
+printState
+ 12
+345
+678
